@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="jquery-jvectormap-2.0.3.css" type="text/css" media="screen"/>
+    <title> </title>
+  </head>
+  <body>
+    <div class="main">
+      <div class="statbar">
+        <div class="score">
+          <div class="USA">
+            <img src="images/USA.png" alt="">
+            <p><span id="USApts">100000</span> pts</p>
+          </div>
+          <div class="USSR">
+            <img src="images/USSR.png" alt="">
+            <p><span id="USSRpts">100000</span> pts</p>
+          </div>
+          <div class="China">
+            <img src="images/China.png" alt="">
+            <p><span id="Chinapts">100000</span> pts</p>
+          </div>
+        </div>
+        <div class="coldwar">
+          <h1>COLD WAR II</h1>
+        </div>
+        <div class="ressource">
+          <p>$<span id="money">100000</span></p>
+          <button type="button" name="button" class="sauvegarde">Sauvegarder</button>
+        </div>
+      </div>
+      <div class="telex">
+        <div class="carousel">
+
+        </div>
+      </div>
+      <div class="carte">
+        <div id="world-map" style="width: 100%; height: 100%"></div>
+      </div>
+    </div>
+
+    <script src="jquery.js"></script>
+    <script src="jquery-jvectormap-2.0.3.min.js"></script>
+    <script src="jquery-jvectormap-world-mill.js"></script>
+    <script>
+      $(function(){
+        $('#world-map').vectorMap({map: 'world_mill'});
+      });
+    </script>
+
+  </body>
+</html>
