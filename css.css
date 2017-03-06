@@ -142,6 +142,7 @@ img {
 
 .date {
   position: absolute;
+  z-index: 100;
   bottom: 72%;
   right: 30px;
   box-shadow: inset 0 -15px 30px rgba(0,0,0,0.4), 0 5px 10px rgba(0,0,0,0.5);
@@ -155,8 +156,87 @@ img {
   cursor: default;
 }
 
+.carteBtn {
+  position: absolute;
+  height: 240px;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  bottom: 20px;
+  left: 20px;
+}
+
+.btnA {
+  height: 50px;
+  width: 50px;
+  border-radius: 3px;
+  background: #292929;
+  box-shadow: inset 0 -15px 30px rgba(0,0,0,0.4), 0 5px 10px rgba(0,0,0,0.5);
+  text-align: center;
+  box-sizing: content-box;
+  cursor: pointer;
+  line-height: 50px;
+  -webkit-font-smoothing: antialiased;
+  -webkit-user-select: none;
+  color: #fff;
+  font-family: 'Source Sans Pro';
+  font-size: 25px;
+
+}
+
+.btnB {
+  height: 50px;
+  width: 50px;
+  border-radius: 3px;
+  background: #292929;
+  box-shadow: inset 0 -15px 30px rgba(0,0,0,0.4), 0 5px 10px rgba(0,0,0,0.5);
+  text-align: center;
+  box-sizing: content-box;
+  cursor: pointer;
+  line-height: 50px;
+  color: #fff;
+  font-family: 'Source Sans Pro';
+  font-size: 25px;
+
+}
+
+.btnC {
+  height: 50px;
+  width: 50px;
+  border-radius: 3px;
+  background: #292929;
+  box-shadow: inset 0 -15px 30px rgba(0,0,0,0.4), 0 5px 10px rgba(0,0,0,0.5);
+  text-align: center;
+  box-sizing: content-box;
+  cursor: pointer;
+  line-height: 50px;
+  color: #fff;
+  font-family: 'Source Sans Pro';
+  font-size: 25px;
+
+}
+
+.btnD {
+  height: 50px;
+  width: 50px;
+  border-radius: 3px;
+  background: #292929;
+  box-shadow: inset 0 -15px 30px rgba(0,0,0,0.4), 0 5px 10px rgba(0,0,0,0.5);
+  text-align: center;
+  box-sizing: content-box;
+  cursor: pointer;
+  line-height: 50px;
+  color: #fff;
+  font-family: 'Source Sans Pro';
+  font-size: 25px;
+
+}
+
 .nextTurn {
   position: absolute;
+  width: 70px;
+  height: 70px;
   z-index: 100;
   bottom: 30px;
   right: 30px;
@@ -166,9 +246,9 @@ img {
   text-shadow: 1px 1px 3px #666666;
   font-family: Arial;
   color: #ffffff;
-  font-size: 30px;
+  font-size: 50px;
   background: #404040;
-  padding: 15px 20px 15px 20px;
+  /*padding: 15px 20px 15px 20px;*/
   text-decoration: none;
   cursor: pointer;
 }
