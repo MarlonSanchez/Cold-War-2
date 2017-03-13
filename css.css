@@ -92,6 +92,10 @@ img {
   font-size: 20px;
 }
 
+.hideDef {
+  display: none;
+}
+
 .sauvegarde {
   -webkit-border-radius: 5;
   -moz-border-radius: 5;
