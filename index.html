@@ -8,6 +8,9 @@
     <title> </title>
   </head>
   <body>
+    <div id="eventModal" class="modal">
+        <div id="eventContent" class="modal-content">  FENETRE MODALE</div>
+      </div>
     <div class="main">
       <div class="statbar">
         <div class="score">
@@ -65,16 +68,15 @@
         </div>
         <button type="button" name="button" class="nextTurn">></button>
       </div>
+      
     </div>
-
+    <!-- Balise de la fenêtre Modale d'events   -->
+    
     <script src="jquery.js"></script>
     <script src="jquery-jvectormap-2.0.3.min.js"></script>
     <script src="jquery-jvectormap-world-mill.js"></script>
-    <script>
-      $(function(){
-        $('#world-map').vectorMap({map: 'world_mill'});
-      });
-    </script>
+    <!-- Les scripts qui gèrent les affichage (carte, scores, fenêtres d'event, etc...)   -->
+    <script src="windowscript.js"></script>
 
   </body>
 </html>
