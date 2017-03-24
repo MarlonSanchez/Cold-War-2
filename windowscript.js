@@ -36,7 +36,9 @@
       $(function(){
         $('#world-map').vectorMap({
         	map: 'world_mill',
-        	
+        	backgroundColor: '#030019',
+          regionStyle: {initial:{fill: '#BDBFBD'}},
+          
     		 onRegionClick:function(e,code) 
     		 {
     		 	openModal('vues/pays.php', true,code);
@@ -77,6 +79,8 @@
 
         $('#world-map').vectorMap({
         map: 'world_mill',
+        backgroundColor: '#030019',
+        regionStyle: {initial:{fill: '#BDBFBD'}},
         onRegionClick:function(e,code) 
          {
           openModal('vues/pays.php', true,code);
@@ -85,8 +89,48 @@
         series: {
           regions: [{
             scale: {
-              '1': '#4169E1',
+              '1': '#32FF2B',
               '2': '#B22222'
+            },
+            attribute: 'fill',
+            values: data['world']
+          }]
+
+        }
+
+
+        });
+
+      
+      });
+
+      
+  });
+
+  $('.btnB').click(function(){      
+   
+      document.getElementById('world-map').innerHTML = "";
+      
+      $.getJSON('vues/cartehotspot.php', function(data){
+
+        $('#world-map').vectorMap({
+        map: 'world_mill',
+        //backgroundColor: 'grey',
+        backgroundColor: '#030019',
+        regionStyle: {initial:{fill: '#BDBFBD'}},
+        
+        
+
+        onRegionClick:function(e,code) 
+         {
+          openModal('vues/pays.php', true,code);
+         },
+        container: $('#world-map'),
+        series: {
+          regions: [{
+            scale: {
+              '1': '#FF8114',
+              '2': '#FF8114'
             },
             attribute: 'fill',
             values: data['world']
