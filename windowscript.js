@@ -33,7 +33,7 @@
       }
   
       // Créer la carte dans la div carte du monde
-      $(function(){
+      /*  $(function(){
         $('#world-map').vectorMap({
         	map: 'world_mill',
         	backgroundColor: '#030019',
@@ -50,6 +50,44 @@
 		 
          
          
+      });
+      */
+
+      $(function(){
+        var map,
+            markerIndex = 0,
+            markersCoords = {};
+
+        map = new jvm.Map({
+            map: 'world_mill',
+            markerStyle: {
+              initial: {
+                fill: 'red'
+              }
+            },
+            container: $('#world-map'),
+            onMarkerTipShow: function(e, label, code){
+              map.tip.text(markersCoords[code].lat.toFixed(2)+', '+markersCoords[code].lng.toFixed(2));
+            },
+            onMarkerClick: function(e, code){
+              map.removeMarkers([code]);
+              map.tip.hide();
+            }
+        });
+
+        map.container.click(function(e){
+            var latLng = map.pointToLatLng(
+                    e.pageX - map.container.offset().left,
+                    e.pageY - map.container.offset().top
+                ),
+                targetCls = $(e.target).attr('class');
+
+            if (latLng && (!targetCls || (targetCls && $(e.target).attr('class').indexOf('jvectormap-marker') === -1))) {
+              markersCoords[markerIndex] = latLng;
+              map.addMarker(markerIndex, {latLng: [latLng.lat, latLng.lng]});
+              markerIndex += 1;
+            }
+        });
       });
 
       //Afficher le budget
