@@ -2,7 +2,7 @@
 
 
 
-//echo $_POST['datapost']; //Pour récupérer la variable avec le code du pays
+echo $_POST['datapost']; //Pour récupérer la variable avec le code du pays
 
 
 

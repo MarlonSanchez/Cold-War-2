@@ -147,40 +147,22 @@
 
   $('.btnB').click(function(){      
    
-      document.getElementById('world-map').innerHTML = "";
-      
-      $.getJSON('vues/cartehotspot.php', function(data){
-
-        $('#world-map').vectorMap({
-        map: 'world_mill',
-        //backgroundColor: 'grey',
-        backgroundColor: '#030019',
-        regionStyle: {initial:{fill: '#BDBFBD'}},
-        
-        
-
-        onRegionClick:function(e,code) 
-         {
-          openModal('vues/pays.php', true,code);
-         },
-        container: $('#world-map'),
-        series: {
-          regions: [{
-            scale: {
-              '1': '#FF8114',
-              '2': '#FF8114'
-            },
-            attribute: 'fill',
-            values: data['world']
-          }]
-
-        }
-
-
-        });
+     document.getElementById('world-map').innerHTML = "";
+    $.post('vues/cartehotspot.php',{datapost:'event'},
+          function(data){         
+            $("#exec").html(data);  
+            
+          });
 
       
-      });
+  });
 
-      
+  $('.btnC').click(function(){ 
+    document.getElementById('world-map').innerHTML = "";
+    $.post('vues/carteevent.php',{datapost:'event'},
+          function(data){         
+            $("#exec").html(data);  
+            
+          });
+
   });
