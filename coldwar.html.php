@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -47,31 +51,38 @@
           <div class="news">
             <span>Latest News</span>
             <ul>
-              <li><a href="#">Bientôt Cold War 2 jouable !</a></li>
-              <li><a href="#">Donnez votre avis sur le forum RGS</a></li>
-              <li><a href="#">Dans Cold War 2, la Chine sera Jouable</a></li>
+              <li><a href="#">Hongrie : répression policière.</a></li>
+              <li><a href="#">Allemagne : mise en place d'une bizone économique américano-britanique</a></li>
+              <li><a href="#">France : élection de Vincent Auriol.</a></li>
+              <li><a href="#">Egypte : la question du retrait des troupes britanniques portée devant l'ONU.</a></li>
+              <li><a href="#">Birmanie: négociation d'un accord avec le Royaume Uni pour l'indépendance .</a></li>
             </ul>
           </div>
         </div>
       </div>
       <div class="carte">
-        <div id="world-map" style="width:100%;height:100%;background-size: 100% ;background-image:url('images/baker.jpg');">
-          <a href="setpartie.php" style="color:black;font:unsigned;"><button  type="button" style="text-align: center; margin-left:33%; width:33%;margin-top:20%; background-color: orange;">JOUER</button></a> 
-
+        <div id="world-map" style="width: 100%; height: 100%"></div>
+        <div class="date">
+          <p><span id="monthDate">Janvier</span> <span id="yearDate">1947</span></p>
         </div>
-        
-        
-          
-        
-        
+        <div class="carteBtn">
+          <div class="btnA"><img src="images/Diplo_1.png" alt=""></div>
+          <div class="btnB">B</div>
+          <div class="btnC">C</div>
+          <div class="btnD">D</div>
+        </div>
+        <button type="button" name="button" class="nextTurn">></button>
       </div>
       
     </div>
     <div id="exec"></div>
     
     <script src="jquery.js"></script>
-    
-    
+    <script src="jquery-jvectormap-2.0.3.min.js"></script>
+    <!--<script src="jquery-jvectormap-world-mill.js"></script>-->
+    <script src="jquery-jvectormap-world-mill.php"></script>
+    <!-- Les scripts qui gèrent les affichage (carte, scores, fenêtres d'event, etc...)   -->
+    <script src="windowscript.js"></script>
 
   </body>
 </html>
